@@ -1,0 +1,12 @@
+{
+  "workloads": [
+    "record-1"
+  ],
+  "observed_usage": {
+    "sample": "evidence"
+  },
+  "resource_limits": {
+    "sample": "evidence"
+  },
+  "headroom_policy": "evidence-record"
+}

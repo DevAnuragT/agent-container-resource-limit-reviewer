@@ -1,0 +1,29 @@
+{
+  "slug": "container-resource-limit-reviewer",
+  "title": "Container Resource Limit Reviewer",
+  "category": "developer-tools",
+  "description": "Review workload limits against observed usage and declared capacity headroom.",
+  "fields": {
+    "workloads": {
+      "label": "workloads",
+      "kind": "list",
+      "minimum": 1
+    },
+    "observed_usage": {
+      "label": "observed usage",
+      "kind": "object",
+      "minimum": 1
+    },
+    "resource_limits": {
+      "label": "resource limits",
+      "kind": "object",
+      "minimum": 1
+    },
+    "headroom_policy": {
+      "label": "headroom policy",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

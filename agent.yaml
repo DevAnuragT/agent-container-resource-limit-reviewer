@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: container-resource-limit-reviewer
+version: 0.1.0
+description: Review workload limits against observed usage and declared capacity headroom.
+skills:
+  - container-resource-limit-reviewer-skill
+tools:
+  - review-container-resource-limit-reviewer
+tags:
+  - developer-tools
+  - evidence-driven

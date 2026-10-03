@@ -1,0 +1,59 @@
+{
+  "name": "review-container-resource-limit-reviewer",
+  "description": "Run Container Resource Limit Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "workloads": {
+            "type": "array",
+            "description": "workloads"
+          },
+          "observed_usage": {
+            "type": "object",
+            "description": "observed usage"
+          },
+          "resource_limits": {
+            "type": "object",
+            "description": "resource limits"
+          },
+          "headroom_policy": {
+            "type": "string",
+            "description": "headroom policy"
+          }
+        },
+        "required": [
+          "workloads",
+          "observed_usage",
+          "resource_limits",
+          "headroom_policy"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-container-resource-limit-reviewer.py",
+    "runtime": "python3"
+  }
+}
